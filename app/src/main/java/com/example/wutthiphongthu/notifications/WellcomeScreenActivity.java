@@ -19,9 +19,9 @@ public class WellcomeScreenActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_wellcome_screen);
         iv = findViewById(R.id.imageView2);
-//        Animation anime = AnimationUtils.loadAnimation(this,R.anim.mytransition);
-//        iv.setAnimation(anime);
-//        final Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        Animation anime = AnimationUtils.loadAnimation(this,R.anim.mytransition);
+        iv.setAnimation(anime);
+        final Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
 
         Thread tr = new Thread() {
             public void run() {
@@ -31,8 +31,8 @@ public class WellcomeScreenActivity extends AppCompatActivity {
                 } catch (InterruptedException iex) {
 
                 } finally {
-                    //  animationDrawable.stop();
-//                    startActivity(intent);
+//                      animationDrawable.stop();
+                    startActivity(intent);
                     finish();
                 }
             }
